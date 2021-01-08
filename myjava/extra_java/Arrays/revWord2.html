@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+		<script type="text/javascript">
+			
+			
+
+				
+
+			var stm="ab cd";
+
+			revWord(stm);
+			function revWord(str){
+
+				var arr=str.split("");
+				var len=arr.length;
+				if(len==0)return;
+				reverse(arr,0,len-1);
+				//console.log(len-1);
+				var start=0;
+				var end=0;
+
+
+				for(end=0 ; end<len-1; end++){
+
+					while(end < len && arr[end]!=' '){
+						end++;
+					}
+
+					if(end < len){
+
+						reverse(arr,start,end-1);
+						start=end +1;
+					}
+
+					//console.log(end);
+				}//end forloop
+				reverse(arr,start,end-2);
+				console.log(arr);
+
+			}
+
+			function reverse(arr,start,end){
+				//end=1;
+
+				while(start < end){
+					
+					let temp=arr[start];
+
+					arr[start]=arr[end];
+					arr[end]=temp;
+
+					start++;
+					end--;
+
+				}
+				return ;
+			}
+		</script>
+</body>
+</html>

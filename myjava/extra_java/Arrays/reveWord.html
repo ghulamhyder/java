@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		revWord("the sky is blue");
+
+		function revWord(str){
+
+			var arr=str.split(" ");
+
+			//console.log(arr.length);
+			var revArr=[];
+
+			//var j=0;
+			for(let i=arr.length-1; i>=0; i--){
+
+				revArr.push(arr[i]);
+
+			}
+			console.log(arr);
+			console.log(revArr);
+
+		}
+	</script>
+</body>
+</html>
